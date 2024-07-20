@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+:root {
+  --mainPink: #ef7998;
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+  --transition:all 1s ease-in-out;
+    
+}
+
+body {
+  font-family: "Kaushan Script", cursive;
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+}/*
+============
+Navbar
+============
+*/
+.navbar-toggler:focus {
+  /*Below line will remove the border from the icon
+    I have used bootstrap icon here */
+  /* This will only remove the shadow effect */
+  /* Border is still there */
+  /* if you don't want any border then set the property equals to zero */
+  border: 0 !important;
+  box-shadow: none !important;
+
+  /* This will remove the rounded corner(radious-border)
+    and give square border */
+  /* border-radius: 0 !important; */
+
+.navbar-toggler {
+  /* This will completely remove border from the icon */
+  /* If you need border for the icon then comment this code */
+  border: 0 !important;
+
+  /* if you want to check the border please uncomment below code */
+  /* border-color: yellow !important; */
+}
+}
+.toggler-icon{
+  font-size: 2rem;
+  color: var(--mainPink);
+}
+.nav-link{
+  color: var(--mainPink);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+.nav-link:hover{
+  color: var(--mainBlack);
+}
+.nav-link:active,.nav-link:focus{
+  color: var(--mainBlack);
+}
+.active {
+  color: var(--mainBlack);
+}
+
+.cart-info{
+  border: 0.1rem solid var(--mainBlack);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: var(--transition);
+  
+}
+.cart-info__icon {
+  display: flex;
+  align-items: center;
+  color: var(--mainBlack);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cart-info__icon i{
+  margin-right: 0.25rem;
+}
+.cart-info:hover{
+  background-color: var(--mainPink);
+  color: var(--mainWhite);
+  border-color: var(--mainPink);
+}
+.cart-info:hover .cart-info__icon{
+  color: var(--mainWhite);
+}
+/*
+============
+banner
+============*/
+.max-height{
+  min-height: calc(100vh - 76px);
+  background:linear-gradient(var(--yellowTrans),var(--yellowTrans)), url(../img/headerBcg.jpeg) center/cover no-repeat fixed;
+  position: relative;
+}
+.banner{
+  color: var(--mainWhite);
+  margin-top: -4rem;
+}
+.banner-title{
+  font-size: 4rem;
+  color: var(--mainPink);
+ }
+ .banner-link{
+  font-size: 1.5rem;
+  border: 0.2rem solid var(--mainBlack);
+ }
+ .banner-link:hover{
+  color: var(--mainPink);
+  background-color: var(--mainBlack);
+ }
+ 
+ .banner-link:focus{
+  box-shadow: none !important;
+ }
+ /*
+============
+about
+============*/
+.about-img__container{
+  position: relative;
+}
+.about-img__container::before{
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: -1.7rem;
+  width: 100%;
+  height: 100%;
+  outline: 0.5rem solid var(--mainYellow);
+  z-index: -1;
+  transition: all 1s linear;
+  }
+  .about-img__container:hover:before{
+    top: 0;
+    left: 0;
+  }
+  /*
+  ============
+  store
+  ============
+  */
+  
+.input-group-text{
+  font-size: 1.5rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: none !important;
+  border-bottom-right-radius: none !important;
+} 
+.form-control{
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;border-top-left-radius: none !important;
+    border-bottom-left-radius: none !important;
+} 
+.form-control:focus{
+  box-shadow: none !important;
+  border: 1px solid var(--mainGrey);
+}
+.search-box{
+  background-color: var(--mainPink);
+  cursor: pointer;
+}
+.store{
+  background-color: var(--mainGrey);
+}
+.btn-black
+{
+  border: 1px soild var(--mainBlack)!important;
+  color: var(--mainBlack);
+}
+.btn-black:hover{
+  background-color: var(--mainBlack);
+  color: var(--mainPink);
+}
+.btn-black:focus {
+   box-shadow: none !important;
+ }
+ .single-item{
+  transition: all 0.3s linear;
+  cursor: pointer;
+ }
+ .single-item:hover{
+  box-shadow: 0 6px 4px rgba(0,0,0,0.6);
+ }
+ .store-img{
+  transition: all 1s ease-in-out;
+ }
+ .img-container{
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+ }
+.img-container:hover .store-img{
+      transform: scale(1.2);
+}
+ .store-item-icon{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background-color: var(--mainYellow);
+  border-top-left-radius: 1rem;
+  transition: all 1s ease-in-out;
+  transform: translate(100%,100%);
+ }
+.img-container:hover .store-item-icon{
+  transform: translate(0, 0);
+}
+.store-item-icon:hover{
+  color: var(--mainWhite);
+}
+ /*
+  ============
+ services
+  ============
+  */
+.services{
+  color: var(--mainWhite);
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../img/servicesBcg.jpeg") center/cover no-repeat fixed;
+  
+}
+.service-title{
+  letter-spacing: 0.5rem;
+}
+.service-text {
+  word-spacing: 0.5rem;
+}
+ /*
+  ============
+ order cake
+  ============
+  */
+.btn-pink{
+  border: 1px solid var(--mainPink);
+  color: var(--mainPink);
+}
+.btn-pink:hover{
+  background-color: var(--mainPink);
+  color: var(--mainBlack);
+}
+.btn-pink:focus {
+  box-shadow: none !important;
+}
+ /*
+  ============
+ footer
+  ============
+  */
+.footer-title{
+  background-color: var(--mainBlack);
+}
+.footer-contact{
+  background-color: var(--mainGrey);
+}
+.footer-icon{
+  color: var(--mainWhite);
+  font-size: 1.5rem;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.footer-icon:hover{
+  color: var(--mainPink);
+}
+ /*
+  ============
+ cart
+  ============
+  */
+  .cart{
+    background-color: rgba(255,255,255,0.6);
+    min-height: 10rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    padding-right: 0;
+    padding-left: 0;
+    
+  }
+  .show-cart{
+    width: 18rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+  }
+  .cart-item-remove{
+    color: var(--mainPink);
+    transition: all 1s ease-in-out;
+  }
+     .cart-item-remove:hover {
+       color: var(--mainBlack);
+       transform: scale(1.1);
+     }
+     .cart-item-price{
+      font-size: 0.8rem;
+     }
+
+
+     .black{
+      background-color: blue;
+     }
+         .blue {
+           background-color: pink;
+         }
